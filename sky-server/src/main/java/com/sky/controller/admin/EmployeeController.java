@@ -45,7 +45,7 @@ public class EmployeeController {
     @ApiOperation(value = "员工登录")
     public Result<EmployeeLoginVO> login(@RequestBody EmployeeLoginDTO employeeLoginDTO) {
         log.info("员工登录：{}", employeeLoginDTO);
-
+        //ctrl+左键login跳到接口，ctrl+alt+左键跳到接口的实现类
         Employee employee = employeeService.login(employeeLoginDTO);
 
         //登录成功后，生成jwt令牌
