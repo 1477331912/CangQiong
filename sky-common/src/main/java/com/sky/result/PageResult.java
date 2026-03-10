@@ -13,6 +13,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+//上面两个注释是自动生成全参和无参构造方法
 public class PageResult implements Serializable {
 
     private long total; //总记录数
