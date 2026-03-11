@@ -36,4 +36,10 @@ public interface EmployeeMapper {
     //不使用注解，使用动态sql，将sql写入映射文件EmployeeMapper.xml
     //装了mybatis插件,有EmployeeMapper.xml映射文件,并且在application.yml中配置了可以扫描到该xml，所以直接在下面代码方法名上alt+enter
     Page<Employee> pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
+
+    /**
+     * 根据主键动态修改属性
+     * @param employee
+     */
+    void update(Employee employee);
 }
