@@ -21,6 +21,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.List;
 
 /**
  * 分类业务层
@@ -115,5 +116,14 @@ public class CategoryServicelmpl implements CategoryService {
                 .updateUser(BaseContext.getCurrentId())
                 .build();
         categoryMapper.update(category);
+    }
+    /**
+     * 根据类型查询分类
+     * @param type
+     * @return
+     */
+    public List<Category> categoryQueryByType(Integer type){
+        List<Category> list = categoryMapper.categoryQueryByType(type);
+        return list;
     }
 }
